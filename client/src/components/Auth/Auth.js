@@ -6,6 +6,7 @@ import { useDispatch } from 'react-redux';
 import { GoogleLogin } from 'react-google-login';
 import { useHistory } from 'react-router-dom';
 import { signup, signin } from '../../actions/auth';
+import {google_api_key} from './secrete';
 import Input from './Input';
 import icon from './icon';
 
@@ -86,7 +87,7 @@ function Auth() {
                         />}
                     </Grid>
                     <GoogleLogin
-                        clientId="891137672722-85gsjui24nqud95sb76euu2a2f1s13dp.apps.googleusercontent.com"
+                        clientId={google_api_key}
                         render={renderProps => (
                             <Button
                                 className={classes.googleButton}
